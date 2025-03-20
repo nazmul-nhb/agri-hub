@@ -16,13 +16,15 @@ type ContactFormData = z.infer<typeof contactSchema>;
 const Contact = () => {
 	const {
 		register,
+		reset,
 		handleSubmit,
 		formState: { errors },
 	} = useForm<ContactFormData>({ resolver: zodResolver(contactSchema) });
 
 	const onSubmit = (data: ContactFormData) => {
-		toast.success('Message sent successfully!');
+		toast.success('Message sent successfully!', { id: 'contact' });
 		console.log(data);
+		reset();
 	};
 
 	return (
@@ -52,7 +54,10 @@ const Contact = () => {
 				/>
 				{errors.message && <p className="text-red-500">{errors.message.message}</p>}
 
-				<button type="submit" className="bg-green-600 text-white px-4 py-2 rounded">
+				<button
+					type="submit"
+					className="bg-green-600 text-white px-4 py-2 rounded cursor-pointer"
+				>
 					Send Message
 				</button>
 			</form>
