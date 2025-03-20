@@ -5,3 +5,10 @@ export interface ICrop {
 	soil: string;
 	image: string;
 }
+
+export interface IFarmingGuide {
+	id: number;
+	title: string;
+	description: string;
+	steps: string[];
+}

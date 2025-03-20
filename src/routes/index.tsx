@@ -5,6 +5,7 @@ import CropDetails from '../pages/CropDetails';
 import FarmingGuides from '../pages/FarmingGuides';
 import Home from '../pages/Home';
 import PestControl from '../pages/PestControl';
+import FarmingGuideDetails from '../pages/FarmingGuideDetails';
 
 const AppRoutes = () => {
 	return (
@@ -13,6 +14,7 @@ const AppRoutes = () => {
 				<Route path="/" element={<Root />}>
 					<Route index element={<Home />} />
 					<Route path="/farming-guides" element={<FarmingGuides />} />
+					<Route path="/farming-guides/:id" element={<FarmingGuideDetails />} />
 					<Route path="/crop-details" element={<CropDetails />} />
 					<Route path="/pest-control" element={<PestControl />} />
 					<Route path="/contact" element={<Contact />} />
