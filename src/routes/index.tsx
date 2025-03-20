@@ -1,0 +1,25 @@
+import { BrowserRouter, Route, Routes } from 'react-router';
+import Root from '../layouts/Root';
+import Contact from '../pages/Contact';
+import CropDetails from '../pages/CropDetails';
+import FarmingGuides from '../pages/FarmingGuides';
+import Home from '../pages/Home';
+import PestControl from '../pages/PestControl';
+
+const AppRoutes = () => {
+	return (
+		<BrowserRouter>
+			<Routes>
+				<Route path="/" element={<Root />}>
+					<Route index element={<Home />} />
+					<Route path="/farming-guides" element={<FarmingGuides />} />
+					<Route path="/crop-details" element={<CropDetails />} />
+					<Route path="/pest-control" element={<PestControl />} />
+					<Route path="/contact" element={<Contact />} />
+				</Route>
+			</Routes>
+		</BrowserRouter>
+	);
+};
+
+export default AppRoutes;
