@@ -1,9 +1,12 @@
+import SectionTitle from '../components/SectionTitle';
+import SectionWrapper from '../components/SectionWrapper';
+
 const Home = () => {
 	return (
-		<section>
-			<h1 className="text-3xl font-bold text-green-700">Welcome to AgriHub</h1>
+		<SectionWrapper>
+			<SectionTitle title="Welcome to AgriHub" subTitle="Hola buddy" />
 			<p>Your trusted source for agricultural information.</p>
-		</section>
+		</SectionWrapper>
 	);
 };
 

@@ -7,7 +7,7 @@ const Root = () => {
 	return (
 		<Fragment>
 			<Navbar />
-			<main className="min-h-screen flex-grow container mx-auto p-4">
+			<main className="min-h-screen max-w-full mx-auto p-4">
 				<Outlet />
 			</main>
 			<Footer />
