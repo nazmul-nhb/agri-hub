@@ -44,7 +44,10 @@ const PestControlStrategies = () => {
 			{pestControlData.map(
 				(tab) =>
 					activeTab === tab.id && (
-						<div key={tab.id} className="flex flex-wrap justify-between mb-12">
+						<div
+							key={tab.id}
+							className="flex flex-wrap justify-between gap-5 mb-12"
+						>
 							<div className="w-full sm:w-1/2">
 								<h3 className="text-xl font-semibold text-green-600 mb-4">
 									{tab.title}
