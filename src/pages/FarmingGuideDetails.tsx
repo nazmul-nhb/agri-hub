@@ -9,6 +9,12 @@ const FarmingGuideDetails = () => {
 
 	return (
 		<div className="p-6 bg-white shadow-md rounded-lg">
+			{/* Displaying the image */}
+			<img
+				src={guide.image}  // Use the image field from the guide data
+				alt={guide.title}
+				className="w-full h-64 object-cover rounded-md mb-6"
+			/>
 			<h1 className="text-3xl font-bold text-green-700">{guide.title}</h1>
 			<p className="text-gray-700">{guide.description}</p>
 			<ul className="list-disc ml-6 mt-4">

@@ -14,7 +14,7 @@ export const navLinks = [
 		icon: <GiFarmer className="lg:hidden" width={24} />,
 	},
 	{
-		path: '/crop-details',
+		path: '/crops',
 		label: 'Crop Details',
 		icon: <GiThreeLeaves className="lg:hidden" width={24} />,
 	},

@@ -1,5 +1,19 @@
-const PestControl = () => {
-	return <h2 className="text-2xl">Pest Control Strategies</h2>;
-};
+import Slider from '../components/Slider'
+import PestControlStrategies from '../components/PestControlStrategies'
 
-export default PestControl;
+export default function PestControl() {
+  return (
+    <>
+      <Slider
+            images={[
+              {
+                src: "sliders/agri.jpg",
+                alt: "Pest Control",
+                description: "Pest Control"
+              }
+            ]}
+          />
+          <PestControlStrategies/>
+    </>
+  )
+}

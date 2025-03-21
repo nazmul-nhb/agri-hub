@@ -1,17 +1,19 @@
-import FarmingGuideCard from '../components/FarmingGuideCard';
-import { farmingGuides } from '../mock-data/farming-guides';
+import Slider from '../components/Slider'
+import Guides from '../components/Guides'
 
-const FarmingGuides = () => {
-	return (
-		<div>
-			<h1 className="text-3xl font-bold text-primary mb-4">Farming Guides</h1>
-			<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-				{farmingGuides.map((guide) => (
-					<FarmingGuideCard key={guide.id} guide={guide} />
-				))}
-			</div>
-		</div>
-	);
-};
-
-export default FarmingGuides;
+export default function FarmingGuides() {
+  return (
+	<>
+	<Slider
+		  images={[
+			{
+			  src: "sliders/agri.jpg",
+			  alt: "Farming Guides",
+			  description: "Farming Guides"
+			}
+		  ]}
+		/>
+		<Guides/>
+  </>
+  )
+}

@@ -1,16 +1,16 @@
-import React from 'react';
+import React, { DetailedHTMLProps, HTMLAttributes } from 'react';
 import { cn } from '../utils/helpers';
 
-interface Props {
+interface Props extends DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> {
 	className?: string;
 	children: React.ReactNode;
 }
 
-const SectionWrapper = ({ className = '', children }: Props) => {
+const SectionWrapper = ({ className = '', children, ...props }: Props) => {
 	return (
-		<section
+		<section {...props}
 			className={cn(
-				'max-w-full w-full mx-auto px-8 md:px-12 lg:px-16 xl:px-20',
+				'max-w-full w-full mx-auto my-8 px-8 md:px-12 lg:px-16 xl:px-20',
 				className
 			)}
 		>

@@ -7,11 +7,11 @@ import { cn } from '../utils/helpers';
 
 const initialScrollState = {
 	opacity: 'bg-primary/60 md:px-6 !shadow-none',
-	title1: 'text-red-600',
+	title1: 'text-orange-600',
 	title2: 'text-white',
 	nav: 'h-20',
 	menu: 'top-0 text-white',
-	logo: 'size-10',
+	logo: 'size-14',
 };
 
 const Navbar = () => {
@@ -42,10 +42,10 @@ const Navbar = () => {
 				setScrollState({
 					opacity: 'backdrop-blur-sm bg-primary/75 md:px-10',
 					title1: 'text-white',
-					title2: 'text-red-600',
+					title2: 'text-orange-600',
 					nav: 'h-16 sm:px-8 px-4',
 					menu: 'top-0 text-gray-200',
-					logo: 'size-9',
+					logo: 'size-12',
 				});
 			} else {
 				setScrollState(initialScrollState);
@@ -91,7 +91,7 @@ const Navbar = () => {
 				onClick={() => setOpenNavbar(!openNavbar)}
 			>
 				{openNavbar ? (
-					<ImCross className="text-red-500 pr-2" size={36} />
+					<ImCross className="text-orangebg-orange-600 pr-2" size={36} />
 				) : (
 					<LuMenu className="text-white pr-2" size={36} />
 				)}
@@ -99,7 +99,7 @@ const Navbar = () => {
 
 			<Link
 				to="/"
-				className="flex items-center gap-1 text-2xl font-semibold ml-8 lg:ml-0"
+				className="flex items-center gap-1 text-2xl md:text-3xl font-semibold md:font-bold ml-8 lg:ml-0"
 			>
 				{/* Logo */}
 				<img
@@ -149,18 +149,18 @@ const Navbar = () => {
 						to={link.path}
 						className={({ isActive }) =>
 							cn(
-								'flex items-center gap-1 hover:text-red-50 transition-all duration-500 ease-out group relative',
+								'flex items-center gap-1 hover:text-red-100 transition-all duration-500 ease-out group relative',
 								{
-									'text-red-600 font-bold': isActive,
+									'text-orange-600 font-bold': isActive,
 								}
 							)
 						}
 					>
 						<span
 							className={cn(
-								'absolute -bottom-1 left-0 w-full h-0.5 bg-red-600 transform origin-center scale-x-0 transition-all duration-500 ease-out group-hover:scale-x-100',
+								'absolute -bottom-1 left-0 w-full h-0.5 bg-orange-600 transform origin-center scale-x-0 transition-all duration-500 ease-out group-hover:scale-x-100',
 								{
-									'bg-red-600 scale-x-100': pathname === link.path,
+									'bg-orange-600 scale-x-100': pathname === link.path,
 								}
 							)}
 						></span>
