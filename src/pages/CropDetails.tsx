@@ -1,5 +1,5 @@
 import { useParams } from 'react-router';
-import { crops } from '../mock-data/crops'; 
+import { crops } from '../mock-data/crops';
 
 const CropDetails = () => {
 	const { id } = useParams();
@@ -13,7 +13,7 @@ const CropDetails = () => {
 			<img
 				src={crop.image}
 				alt={crop.name}
-				className="w-full h-64 object-cover rounded-md mb-6"
+				className="w-full aspect-[4.2] object-cover rounded-md mb-6"
 			/>
 
 			{/* Crop Name */}
@@ -39,7 +39,8 @@ const CropDetails = () => {
 
 			{/* Harvesting Techniques */}
 			<p className="text-gray-700 mt-4">
-				<strong>Harvesting Techniques:</strong> {crop.harvestingTechniques.join(', ')}
+				<strong>Harvesting Techniques:</strong>{' '}
+				{crop.harvestingTechniques.join(', ')}
 			</p>
 
 			{/* Nutritional Values */}
