@@ -46,7 +46,7 @@ const PestControlStrategies = () => {
 					activeTab === tab.id && (
 						<div
 							key={tab.id}
-							className="flex flex-wrap justify-between gap-5 mb-12"
+							className="flex flex-col md:flex-row justify-between gap-5 mb-12"
 						>
 							<div className="w-full sm:w-1/2">
 								<h3 className="text-xl font-semibold text-green-600 mb-4">
